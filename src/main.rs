@@ -13,11 +13,7 @@ struct Bot;
 #[async_trait]
 impl EventHandler for Bot {
     async fn message(&self, ctx: Context, msg: Message) {
-        if msg.content == "!hello" {
-            if let Err(e) = msg.channel_id.say(&ctx.http, "world!").await {
-                error!("Error sending message: {:?}", e);
-            }
-        } else if msg.content.to_lowercase().contains("buffcorrell")
+        if msg.content.to_lowercase().contains("buffcorrell")
             || msg.content.to_lowercase().contains("buffy c")
         {
             let random_number: i32 = rand::thread_rng().gen_range(0..12);
