@@ -15,7 +15,7 @@ impl EventHandler for Bot {
     async fn message(&self, ctx: Context, msg: Message) {
         if msg.content.to_lowercase().contains("buffcorrell")
             || msg.content.to_lowercase().contains("buffy c")
-            || msg.content.contains("LETS GET IT")
+            || msg.content.contains("LETS GET IT") && !msg.author.bot
         {
             let random_number: i32 = rand::thread_rng().gen_range(0..12);
             let gif_name = format!("./media/buffy-dance{}.gif", random_number);
