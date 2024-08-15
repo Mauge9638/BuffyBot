@@ -18,3 +18,7 @@ For more information please refer to the [Discord docs](https://discord.com/deve
 ## Built using
 
 https://blog.logrocket.com/building-rust-discord-bot-shuttle-serenity/
+
+## Deploy
+
+deploy using `cargo shutte deploy`
